@@ -154,7 +154,7 @@ function getCookie(cname){
 function getText(){
         var d=new Date();
         var text=jQuery("#textarea").val();
-        var msginfo=getCookie("username")+","+d.toLocaleString();
+        var msginfo="bbsid:"+getCookie("username")+","+d.toLocaleString();
         var comments=text;
         localStorage.setItem(msginfo,comments);
         jQuery("#textbox").text("");
@@ -164,7 +164,8 @@ function getText(){
 function readText(){
     for(var i=localStorage.length-1;i>=0;i--){
         var text=localStorage.getItem(localStorage.key(i));
-        var record=document.createElement("div");
+        if(localStorage.key(i).indexOf("bbsid:")==0){
+            var record=document.createElement("div");
         var innerrecord=document.createElement("div");
         record.className="record";
         innerrecord.className="innerrecord";
@@ -191,7 +192,7 @@ function readText(){
             jQuery("#textarea").text("@"+pid.split(",")[0]+" ");
         });
         record.appendChild(rep);
-        if(localStorage.key(i).split(',')[0]==getCookie("username")){
+        if(localStorage.key(i).split(',')[0].substr("bbsid:".length)==getCookie("username")){
             var del=document.createElement("button");
             del.className="del";
             del.innerHTML="删除";
@@ -203,5 +204,6 @@ function readText(){
         record.appendChild(del);
         }
         $("recordbox").appendChild(record);
+        }
     }
 }
