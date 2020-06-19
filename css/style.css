@@ -1,0 +1,156 @@
+/*全局样式*/
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAFA;
+    position: relative;
+}
+#user{
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+}
+#notice{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-style: italic;
+    color: #d3d3d3;
+}
+/*导航栏的样式*/
+.navi{
+    margin: 0;
+    text-align: center;
+    background-color: #FFFAFA;
+}
+.navi ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #FFFAFA;
+}
+.navi li{
+    float: left;
+}
+.navi li a{
+    display: block;
+    color: 	#708090;
+    text-align: center;
+    padding: 12px 36px;
+    text-decoration: none;
+    font-family: "微软雅黑"
+}
+.navi li a:hover,a:active{
+    color: #1E90FF;
+}
+
+/*主容器的样式*/
+#main{
+    position: absolute;
+    left: 12%;
+    width: 50%;
+    padding-right: 20px;
+    margin: 20px;
+    text-align: justify;
+    font-family: "雅黑";
+    font-size: 14px;
+    background-color: #FFFAFA;
+    line-height: 2em;
+    border-right: 0.5px solid #dcdcdc;
+}
+/*侧边栏的样式*/
+#cebian{
+    position: absolute;
+    left:67%;
+    width: 270px;
+}
+
+/*地图样式*/
+#map{
+    width: 250px;
+    height: 250px;
+    border: 2px solid gray;
+    overflow: hidden;
+    padding: 5px;
+    text-align: center; 
+    z-index: 2;
+    margin: auto;
+    margin-top: 20px;
+}
+/*社区元素的样式*/
+#headbox{
+    width: 100%;
+    display: inline-block;
+}
+#textbox{
+    width: 100%;
+}
+#textarea{
+    border:0;
+    border-radius:5px;
+    background-color:rgba(241,241,241,.98);
+}
+#submit{
+    padding: 9px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    border: none;
+    background-color: #778899;
+    color: white;
+    font-size: 14px;
+}
+#recordbox{
+    padding: 5px;
+    margin: 0;
+    border-style:outset;
+    margin-bottom: 10px;
+}
+.record{
+    padding: 20px;
+    background-color: #F5F5F5;
+    position: relative;
+    border: 0.5px solid #bebebe;
+    height:100%; 
+    overflow:hidden; 
+}
+.innerrecord p{
+    text-align: left;
+    border-bottom: 1px solid gray;
+    position: absolute;
+    top:0px;
+    left: 150px;
+    color: blue;
+}
+.innerrecord #blockquote{
+    position: absolute;
+    top:30px;
+    left: 150px;
+    border: none;
+    font-size:12px;
+    color: #2F4F4F;
+} 
+.reply{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    padding: 6px 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+.innerImg{
+    display: inline-block;
+    border: 1px solid #888888;
+}
+.innerrecord{
+    display: inline-block;
+}
+.del{
+    position: absolute;
+    bottom: 10px;
+    right: 72px;
+    border: none;
+    padding: 6px 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+

@@ -1,0 +1,49 @@
+html,body{
+    background-image: url(/img/login.jpg);
+    font-size:14px;
+}
+/*登录框的样式*/
+#loginbox{
+    background-color: #FFFAFA;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0px 15px 25px 0 rgba(0,0,0,.6);
+    text-align: center;
+    padding: 20px;
+    box-sizing:border-box;
+    background-color: beige;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+/*登录框组件的样式*/
+.item{
+    height: 45px;
+    border-bottom: 1px solid #708090;
+    margin-bottom: 40px;
+    position: relative;
+}
+input,button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.item input{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.item label{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#login_btn{
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #708090;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}

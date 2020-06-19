@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>饶平——饶永不瘠，平永不乱</title>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <!--CSS文件源-->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+        <!--js脚本文件源-->
+        <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+        <script type="text/javascript"src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/prototype.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>   
+    </head>
+    <body>
+        <!--导航栏容器-->
+        <div class="navi">
+            <ul>
+            <li id="home"><a href="javascript:void(0);" onclick="LoadDoc('home')">主页</a></li>
+            <li id="ftrq"><a href="javascript:void(0);" onclick="LoadDoc('ftrq')">风土人情</a></li>
+            <li id="ttcp"><a href="javascript:void(0);" onclick="LoadDoc('ttcp')">土特产品</a></li>
+            <li id="dfjj"><a href="javascript:void(0);" onclick="LoadDoc('dfjj')">地方经济</a></li>
+            <li id="dfjy"><a href="javascript:void(0);" onclick="LoadDoc('dfjy')">地方教育</a></li>
+            <li id="whcc"><a href="javascript:void(0);" onclick="LoadDoc('whcc')">文化传承</a></li>
+            <li id="mrds"><a href="javascript:void(0);" onclick="LoadDoc('mrds')">名人大事</a></li>
+            <li id="yst"><a href="javascript:void(0);" onclick="loadBBS()">议事堂</a></li>
+        </ul>
+        </div>
+        <!--动态图片容器-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/header.png" width="100%" height="100%"></div>
+                <div class="swiper-slide"><img src="img/header2.png" width="100%" height="100%"></div>
+            </div>
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-pagination swiper-pagination-white"></div>
+        </div>
+        <!--主容器-->
+            <div id="main"></div>
+            <div id="cebian">
+                <div id="map"></div>
+                <div id="user"><a href="login.html"></a></div>
+                <div id="notice"><p>Design by Bodong@2020</p></div>
+            </div>
+    </body>
+</html>
