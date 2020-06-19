@@ -86,28 +86,21 @@ function highLight(obj){
 //生成地图，基于百度地图提供的API
 function initMap(){
     createMap();
-    setMapEvent();
-    addMapControl();
 }
 function createMap(){
     var map=new BMap.Map("map");
-    var point=new BMap.Point(117.011793,23.668609);
-    map.centerAndZoom(point,12);
-    window.map=map;
+    map.centerAndZoom(new BMap.Point(117.011793,23.668609),12);	  
+	map.setCurrentCity("饶平"); 
+    map.enableScrollWheelZoom(true);
+    addMapControl(map); 
 }
-function setMapEvent(){
-    map.enableDragging();
-    map.enableScrollWheelZoom();
-    map.enableDoubleClickZoom();
-    map.enableKeyboard();
-}
-function addMapControl(){
-    var ctrl_nav=new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-    map.addControl(ctrl_nav);
-    var ctrl_ove=new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-    map.addControl(ctrl_ove);
-    var ctrl_sca=new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-    map.addControl(ctrl_sca);
+function addMapControl(map){
+    var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});
+	var top_left_navigation = new BMap.NavigationControl();  
+    var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL});
+    map.addControl(top_left_control);        
+	map.addControl(top_left_navigation);     
+	map.addControl(top_right_navigation);  
 }
 //加载BBS论坛
 function loadBBS(){
